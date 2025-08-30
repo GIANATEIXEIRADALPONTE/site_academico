@@ -1,0 +1,99 @@
+/* =====================================================
+   Estilos gerais — CSS puro (sem Bootstrap ou similares)
+   ===================================================== */
+:root{
+  --bg:#0b0c10;
+  --paper:#111317;
+  --ink:#e5e7eb;
+  --muted:#9ca3af;
+  --primary:#4f46e5;
+  --card:#16181d;
+  --accent:#22c55e;
+}
+
+*{ box-sizing: border-box; }
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink); font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Apple Color Emoji','Segoe UI Emoji', 'Segoe UI Symbol'; }
+
+a{ color:var(--ink); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.container{ width:min(1100px, 92%); margin-inline:auto; }
+
+/* Cabeçalho e navegação fixa no topo — menu visível em todas as páginas/seções */
+.site-header{
+  position: sticky; top:0; z-index: 50;
+  background: rgba(11,12,16,0.9);
+  border-bottom: 1px solid rgba(229,231,235,0.1);
+  backdrop-filter: blur(6px);
+}
+.nav{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0.8rem 1rem; }
+.brand{ font-weight:700; letter-spacing: .2px; }
+.menu{ list-style:none; display:flex; gap:1rem; margin:0; padding:0; }
+.menu a{ padding:.5rem .8rem; border-radius:.6rem; display:inline-block; }
+.menu a:hover{ background: rgba(255,255,255,0.06); text-decoration:none; }
+
+/* Seção hero */
+.hero{
+  min-height: 65vh;
+  display:grid;
+  place-items:center;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(79,70,229,.15), transparent 60%),
+              radial-gradient(900px 500px at 90% 0%, rgba(34,197,94,.12), transparent 60%);
+}
+.hero-inner{ text-align:center; padding:5rem 1rem; }
+h1{ font-size: clamp(2rem, 6vw, 3.5rem); margin:.2rem 0; }
+h2{ font-size: clamp(1.8rem, 3vw, 2.2rem); margin:0 0 .6rem; }
+h3{ margin:.4rem 0 .2rem; }
+p{ line-height:1.6; }
+
+.btn{
+  background: var(--primary);
+  color: white;
+  display:inline-block;
+  padding:.75rem 1rem;
+  border-radius:.7rem;
+  border: none;
+  font-weight:600;
+  cursor: pointer;
+}
+.btn:hover{ filter: brightness(1.05); }
+.btn.small{ padding:.45rem .7rem; font-size:.9rem; }
+
+.muted{ color:var(--muted); }
+.small{ font-size: .9rem; }
+
+/* Seções genéricas */
+.section{ padding: 4rem 0; background: var(--paper); }
+.section.alt{ background: #0f1216; }
+
+/* Cards responsivos */
+.cards{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1rem; margin-top:1rem; }
+.card{ background: var(--card); border: 1px solid rgba(229,231,235,0.08); border-radius: 1rem; padding:1rem; }
+.project p{ min-height: 3.4rem; }
+
+/* Timeline simples para formação */
+.timeline{ list-style:none; padding:0; margin:1rem 0 0; border-left: 2px solid rgba(229,231,235,0.08); }
+.timeline li{ padding: .6rem 0 .6rem 1rem; margin-left:.6rem; position:relative; }
+.timeline li::before{
+  content:''; position:absolute; left:-10px; top:1rem;
+  width:10px; height:10px; background: var(--accent); border-radius: 999px;
+}
+
+/* Formulário (parte visual) */
+.form .grid{ display:grid; grid-template-columns: 1fr; gap:.6rem; }
+label{ font-size:.95rem; color:var(--muted); }
+input, textarea{
+  width:100%; padding:.8rem 1rem;
+  background:#0b0e13; border:1px solid rgba(229,231,235,0.08);
+  border-radius:.8rem; color:var(--ink);
+}
+input::placeholder, textarea::placeholder{ color:#6b7280; }
+input:focus, textarea:focus{ outline:2px solid rgba(79,70,229,.6); border-color: transparent; }
+
+.site-footer{ background:#0b0c10; padding:1.5rem 0; border-top:1px solid rgba(229,231,235,.08); }
+
+/* Responsividade básica */
+@media (min-width: 720px){
+  .form .grid{ grid-template-columns: 1fr 1fr; }
+  #mensagem{ grid-column: 1 / -1; }
+}

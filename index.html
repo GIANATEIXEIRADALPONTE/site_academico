@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio — Giana Teixeira Dal Ponte</title>
+  <!-- 
+    Trabalho prático — Fundamentos de Programação Web (HTML + CSS puro)
+    Requisitos implementados:
+      - Menu visível em todas as seções (nav fixa no topo) com pelo menos 4 links internos.
+      - Páginas/Seções: Sobre mim, Formação, Portfólio, Contato.
+      - Formulário de contato (parte visual) com inputs: nome, email, mensagem.
+      - Código comentado e organizado, sem Bootstrap ou frameworks.
+      - Diagramação responsiva e acessível.
+    Observação: personalize os textos para evitar conteúdo genérico e garantir originalidade.
+  -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cabeçalho com navegação fixa -->
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Ir ao início">Giana T. Dal Ponte</a>
+      <ul class="menu">
+        <!-- Links internos (âncoras) — trocam o conteúdo rolando para a seção -->
+        <li><a href="#sobre-mim">Sobre mim</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção de abertura / herói -->
+  <section id="inicio" class="hero" aria-label="Apresentação">
+    <div class="hero-inner">
+      <h1>Olá! Eu sou a Giana</h1>
+      <p>Analista de Projetos &amp; Dados com foco em BI e melhoria de processos.</p>
+      <p class="muted">Atuo na área de dados (SQL, PySpark, NiFi) e curso Ciência da Computação (3º semestre).</p>
+      <a class="btn" href="#portfolio">Ver projetos</a>
+    </div>
+  </section>
+
+  <!-- Seção: Sobre mim -->
+  <section id="sobre-mim" class="section">
+    <div class="container">
+      <h2>Sobre mim</h2>
+      <p>
+        Sou profissional de dados com background em Administração (ênfase em marketing) e pós-MBA em Gestão da Inovação.
+        Tenho experiência em <strong>automação de relatórios</strong>, <strong>análises de receita/lotação</strong> e
+        <strong>dashboards em BI</strong>. Intercâmbio na Disney (Animal Kingdom) e vivência com atendimento ao cliente.
+      </p>
+      <p>
+        Interesses atuais: inteligência artificial aplicada a operações, visualização de dados,
+        qualidade/validação de bases e produtos digitais enxutos.
+      </p>
+      <!-- Dica ao avaliador/colega (comentário apenas no código) -->
+      <!-- Substitua os parágrafos por sua trajetória pessoal e hobbies para garantir originalidade. -->
+      <div class="cards">
+        <article class="card">
+          <h3>Habilidades</h3>
+          <ul>
+            <li>SQL • PySpark • NiFi</li>
+            <li>Modelagem de dados • ETL</li>
+            <li>Power BI • Storytelling com dados</li>
+            <li>Gestão de projetos • Melhoria de processos</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Idiomas</h3>
+          <ul>
+            <li>Português — nativo</li>
+            <li>Inglês — avançado (UF/Disney)</li>
+            <li>Italiano — básico</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Onde atuo</h3>
+          <p>Experiência em transporte rodoviário de passageiros e operação de vendas/receita.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção: Formação -->
+  <section id="formacao" class="section alt">
+    <div class="container">
+      <h2>Formação</h2>
+      <ul class="timeline">
+        <li>
+          <div class="time">2023 — atual</div>
+          <div class="desc">
+            <strong>Ciência da Computação</strong> — graduação (3º semestre)
+          </div>
+        </li>
+        <li>
+          <div class="time">Pós-MBA</div>
+          <div class="desc"><strong>Gestão da Inovação</strong></div>
+        </li>
+        <li>
+          <div class="time">Administração</div>
+          <div class="desc"><strong>Ênfase em Marketing</strong></div>
+        </li>
+        <li>
+          <div class="time">Cursos</div>
+          <div class="desc">Turismo, gestão do cliente, marcas (Universidade da Flórida)</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Seção: Portfólio -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2>Portfólio</h2>
+      <p class="muted">Alguns trabalhos acadêmicos e corporativos (quando públicos/anonimizados):</p>
+
+      <!-- Cards de projetos com links externos (opcional) -->
+      <div class="cards">
+        <article class="card project">
+          <h3>Receitas Embarcadas por Trecho</h3>
+          <p>Pipeline de dados com NiFi + PySpark e dashboard em BI para acompanhamento de budget e lotação.</p>
+          <!-- Se houver, substitua o # por um link público do trabalho (GitHub/Power BI/Slides) -->
+          <a class="btn small" href="#" aria-label="Abrir projeto Receitas Embarcadas">Ver detalhes</a>
+        </article>
+
+        <article class="card project">
+          <h3>Relatórios de Canais de Vendas</h3>
+          <p>Modelagem e automação de relatórios com foco em operação e estratégia comercial.</p>
+          <a class="btn small" href="#" aria-label="Abrir projeto Relatórios de Canais de Vendas">Ver detalhes</a>
+        </article>
+
+        <article class="card project">
+          <h3>Site acadêmico (este)</h3>
+          <p>Portfólio pessoal desenvolvido em HTML5 e CSS3 puro, com navegação fixa (4 seções internas),
+             layout responsivo e formulário de contato (visual). Código comentado conforme as diretrizes da disciplina.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção: Contato (apenas parte visual) -->
+  <section id="contato" class="section alt">
+    <div class="container">
+      <h2>Contato</h2>
+      <!-- Formulário visual sem backend (action vazio).
+           Campos solicitados no enunciado: nome, email, mensagem. -->
+      <form class="form" action="" method="get">
+        <div class="grid">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
+
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="seu@email.com" required />
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+        </div>
+        <button class="btn" type="submit">Enviar</button>
+        <p class="muted small">* Somente a apresentação visual é exigida — sem envio real.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="ano"></span> Giana T. Dal Ponte — Portfólio.</p>
+    </div>
+  </footer>
+
+  <!-- JS opcional apenas para atualizar o ano (não é necessário ao requisito).
+       Se preferir não usar JS, pode remover o script a seguir. -->
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
